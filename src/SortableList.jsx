@@ -54,7 +54,25 @@ export const SortableList = (props) => {
   };
   
   const exportItems = () => {
-    console.log(items())
+    let subtitleBuffer = null;
+    let subtitle = null;
+    let h5Buffer = null;
+    let sections = null;
+    items().map(item => {
+      if (item.typ === "article") {
+        articles.push(item)
+      } else {
+        // clean up previous buffer
+        if (articles.length > 0) {
+          if (titles.length > 1) {
+            let title = titles.pop();
+
+          }
+        }
+        titles.push(item)
+      }
+    })
+    console.log(titles)
   }
 
   return (
