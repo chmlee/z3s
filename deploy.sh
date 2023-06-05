@@ -3,7 +3,8 @@ cd dist
 
 echo 'z3s.chmlee.com' > CNAME
 
+git init
 git add -A
 git commit -m 'deploy'
 
-git push origin dist
+git push -f origin dist
