@@ -1,0 +1,16 @@
+.subtitle {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.title {
+  text-indent: 0em;
+  text-decoration: underline;
+  margin-top: 10px; 
+  margin-bottom: 10px
+}
+
+.summary {
+  text-indent: 1em;
+}

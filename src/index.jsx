@@ -12,4 +12,39 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
+import {
+  DragDropProvider,
+  DragDropSensors,
+  createDraggable,
+  createDroppable,
+  DragDropDebugger,
+} from "@thisbeyond/solid-dnd";
+import { createSignal, Show } from "solid-js";
+
+const Draggable = (props) => {
+  console.log(props.id)
+  const draggable = createDraggable(props.id);
+  return (
+    <div 
+      use:draggable 
+      style={{ height: '20pt', 'background-color': 'red' }}
+    >
+      {props.item.text}
+    </div>
+  );
+};
+
+
+const Droppable = (props) => {
+  const droppable = createDroppable(props.id);
+  return (
+    <div
+      use:droppable
+      style={{ height: '50pt', 'background-color': 'grey' }}
+    >
+      {props.children}
+    </div>
+  );
+};
+
 render(() => <App />, root);
